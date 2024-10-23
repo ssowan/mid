@@ -2,11 +2,12 @@
 <html dir="rtl" lang="ar">
 <head>
     <meta charset="UTF-8">
-    <title>نظام إدارة الأدوية</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام إدارة الأدوية - دار ابو هاشم</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 10px;
             background-color: #f0f0f0;
         }
         
@@ -56,7 +57,7 @@
         
         #medicineForm {
             background-color: white;
-            padding: 20px;
+            padding: 15px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             margin-top: 20px;
@@ -84,6 +85,13 @@
             padding: 15px;
             background-color: white;
             border-radius: 8px;
+        }
+
+        @media (max-width: 600px) {
+            button {
+                width: 100%;
+                margin: 5px 0;
+            }
         }
     </style>
 </head>
@@ -116,7 +124,7 @@
                 <input type="text" id="englishName" required>
             </div>
             <div class="form-group">
-                <label for="recipe">الوصفة:</label>
+                <label for="recipe ">الوصفة:</label>
                 <textarea id="recipe"></textarea>
             </div>
             <div class="form-group">
@@ -556,9 +564,7 @@
   "Type": "كريم",
   "New /Used": "New"
  },
-
-			
-            // أضف المزيد من الأدوية هنا
+			 // أضف المزيد من الأدوية هنا
         ];
 
         let currentMedicineIndex = -1;
@@ -622,7 +628,7 @@
                     <td>
                         <button onclick="showEditForm(${index})">تعديل</button>
                         <button onclick="deleteMedicine(${index})">حذف</button>
-                    </td>
+                    </td >
                 `;
                 tableBody.appendChild(row);
             });
